@@ -4,7 +4,7 @@
 	</span>
 </div>
 <div>
-	<g:uploadForm name="myUpload" controller="term" action="handleFile"
+	<g:uploadForm name="myUpload" controller="term" action="${action}"
 			align="center" padding="20px">
 		<input type="file" name="payload"/>
 		<input type="submit"/>
