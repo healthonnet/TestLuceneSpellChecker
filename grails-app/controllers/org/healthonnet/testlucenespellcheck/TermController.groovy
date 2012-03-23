@@ -1,13 +1,13 @@
 package org.healthonnet.testlucenespellcheck
 
-import org.healthonnet.testlucenespellcheck.TermFrequencyFileAnalyzerService;
+import org.healthonnet.testlucenespellcheck.TermFrequencyFileLoaderService;
 
 class TermController {
 
 	static final TEMP_FILENAME = "uploadedTsv"
 	static final TEMP_FILENAME_SUFFIX = ".txt"
 	
-	TermFrequencyFileAnalyzerService termFrequencyFileAnalyzerService
+	def termFrequencyFileLoaderService
 	
     def index() { 
 		render "hello world"
@@ -34,7 +34,7 @@ class TermController {
 		tempFile.deleteOnExit();
 		downloadedFile.transferTo(tempFile);
 		
-		termFrequencyFileAnalyzerService.analyzeFile(tempFile);
-		
+		def loadResult = termFrequencyFileLoaderService.analyzeFile(tempFile);
+		return [numInserted : loadResult.getNumInserted(), timeElapsed: loadResult.getTimeElapsed()];
 	}
 }
