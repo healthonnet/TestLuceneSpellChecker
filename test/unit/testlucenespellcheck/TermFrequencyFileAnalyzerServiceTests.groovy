@@ -3,6 +3,8 @@ package testlucenespellcheck
 
 
 import grails.test.mixin.*
+
+import org.healthonnet.testlucenespellcheck.TermFrequencyFileAnalyzerService;
 import org.junit.*
 
 /**

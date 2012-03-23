@@ -1,6 +1,6 @@
 package org.healthonnet.testlucenespellcheck
 
-import testlucenespellcheck.TermFrequencyFileAnalyzerService;
+import org.healthonnet.testlucenespellcheck.TermFrequencyFileAnalyzerService;
 
 class TermController {
 

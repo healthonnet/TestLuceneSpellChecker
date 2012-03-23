@@ -13,5 +13,11 @@ class Term {
     static constraints = {
 		value blank : false
 		frequency min : 0
+		
     }
+	
+	static mapping = {
+		value index: 'value_frequency_index'
+		frequency index: 'value_frequency_index'
+	}
 }
